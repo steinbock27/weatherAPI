@@ -1,4 +1,4 @@
-const weatherImg = document.querySelector('img');
+const weatherImg = document.querySelectorAll('img')[1];
 const container = document.querySelector('section');
 
 let arrImages =[
@@ -24,7 +24,7 @@ function findCity() {
         let p = document.createElement('p');
         p.textContent= data.main.temp;
         container.appendChild(p);
-
+console.log("bulut",data.weather[0].main)
         switch (data.weather[0].main) {
             case 'Clouds':
                 weatherImg.src=arrImages[0];
